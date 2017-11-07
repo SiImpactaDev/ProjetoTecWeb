@@ -1,0 +1,112 @@
+create table DisciplinaOfertada(
+nome_disciplina varchar(240),
+ano smallint,
+semestre char(1),
+primary key (nome_disciplina, ano, semestre),
+foreign key (nome_disciplina) references Disciplina(nome)
+);
+
+create table Turma(
+nome_disciplina varchar(240),
+ano_ofertado smallint,
+semestre_ofertado char(1),
+id char(1)
+turno varchar(15),
+ra_professor int,
+primary key (nome_disciplina, ano_ofertado, semestre_ofertado, id),
+foreign key (nome_disciplina) references DisciplinaOfertada(nome_disciplina),
+foreign key (ano_ofertado) references DisciplinaOfertada(ano),
+foreign key (semestre_ofertado) references DisciplinaOfertada(semestre),
+foreign key (ra_professor) references Professor(ra)
+);
+
+create table Matricula(
+ra_aluno int,
+nome_disciplina varchar(240),
+ano_ofertado smallint,
+semestre_ofertado char(1),
+id_turma char(1),
+primary key (ra_aluno, nome_disciplina, ano_ofertado, semestre_ofertado, id_turma),
+foreign key (ra_aluno) references Aluno(ra),
+foreign key (nome_disciplina) references Turma(nome_disciplina),
+foreign key (ano_ofertado) references Turma(ano_ofertado),
+foreign key (semestre_ofertado) references Turma(semestre_ofertado),
+foreign key (id_turma) references Turma(id)
+);
+
+create table CursoTurma(
+sigla_curso varchar(5),
+nome_disciplina varchar(240),
+ano_ofertado smallint,
+semestre_ofertado char(1),
+id_turma char(1),
+primary key (sigla_curso, nome_disciplina, ano_ofertado, semestre_ofertado, id_turma),
+foreign key (sigla_curso) references Curso(sigla),
+foreign key (nome_disciplina) references Turma(nome_disciplina),
+foreign key (ano_ofertado) references Turma(ano_ofertado),
+foreign key (semestre_ofertado) references Turma(semestre_ofertado),
+foreign key (id_turma) references Turma(id)
+);
+
+create table Questao(
+nome_disciplina varchar(240),
+ano_ofertado smallint,
+semestre_ofertado char(1),
+id_turma char(1),
+numero int,
+data_limite_entrega date,
+descricao varchar(150),
+data date,
+primary key (nome_disciplina, ano_ofertado, semestre_ofertado, id_turma, numero),
+foreign key (nome_disciplina) references Turma(nome_disciplina),
+foreign key (ano_ofertado) references Turma(ano_ofertado),
+foreign key (semestre_ofertado) references Turma(semestre_ofertado),
+foreign key (id_turma) references Turma(id)
+);
+
+create table ArquivosQuestao(
+nome_disciplina varchar(240),
+ano_ofertado smallint,
+semestre_ofertado char(1),
+id_turma char(1),
+numero_questao int,
+arquivo varchar(500),
+primary key (nome_disciplina, ano_ofertado, semestre_ofertado, id_turma, numero_questao, arquivo),
+foreign key (nome_disciplina) references Questao(nome_disciplina),
+foreign key (ano_ofertado) references Questao(ano_ofertado),
+foreign key (semestre_ofertado) references Questao(semestre_ofertado),
+foreign key (id_turma) references Questao(id_turma),
+foreign key (numero_questao) references Questao(numero),
+);
+
+create table Resposta(
+nome_disciplina varchar(240),
+ano_ofertado smallint,
+semestre_ofertado char(1),
+id_turma char(1),
+numero_questao int,
+ra_aluno int,
+primary key (nome_disciplina, ano_ofertado, semestre_ofertado, id_turma, numero_questao, ra_aluno),
+foreign key (nome_disciplina) references Questao(nome_disciplina),
+foreign key (ano_ofertado) references Questao(ano_ofertado),
+foreign key (semestre_ofertado) references Questao(semestre_ofertado),
+foreign key (id_turma) references Questao(id_turma),
+foreign key (numero_questao) references Questao(numero)
+);
+
+create table ArquivosResposta(
+nome_disciplina varchar(240),
+ano_ofertado smallint,
+semestre_ofertado char(1),
+id_turma char(1),
+numero_questao int,
+ra_aluno int,
+arquivo varchar(500),
+primary key (nome_disciplina, ano_ofertado, semestre_ofertado, id_turma, numero_questao, ra_aluno, arquivo),
+foreign key (nome_disciplina) references Resposta(nome_disciplina),
+foreign key (ano_ofertado) references Resposta(ano_ofertado),
+foreign key (semestre_ofertado) references Resposta(semestre_ofertado),
+foreign key (id_turma) references Resposta(id_turma),
+foreign key (numero_questao) references Resposta(numero_questao),
+foreign key (ra_aluno) references Resposta(ra_aluno)
+);
