@@ -1,0 +1,244 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	font-size: normal;
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+}
+
+a {
+	text-decoration: none;
+	-moz-transition: all linear .3s;
+	-webkit-transition: all linear .3s;
+	-o-transition: all linear .3s;
+	transition: all linear .3s;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+.btn {
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	width: 120px;
+	height: 40px;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-moz-transition: background .3s linear;
+	-webkit-transition: background .3s linear;
+	-o-transition: background .3s linear;
+	transition: background .3s linear;
+}
+
+.btn:focus {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	outline: none;
+}
+
+.cover {
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+
+.container {
+	position: relative;
+	z-index: 3;
+}
+
+/*Header*/
+/*Top nav left*/
+.top-nav {
+	;
+	color: black;
+	line-height: 40px;
+	border-bottom: 1px solid #01b1d7;
+}
+
+/*Top left Menu*/
+.top-left {
+	float: left;
+}
+
+.top-left ul >li {
+	display: inline-block;
+	margin-right: 15px;
+}
+
+.top-left a {
+	font-size: 16px;
+	color: #333;
+}
+
+.top-left a:hover {
+	color: #01b1d7;
+}
+
+#main-nav{
+	background-color:black;
+}
+
+
+/*Nagivation*/
+#main-nav {
+	padding:15px 0;
+}
+
+.espaco{
+    vertical-align: top;
+}
+
+/*Affix*/
+#main-nav.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    z-index:10;
+	-moz-box-shadow: 0 1px 2px #ebebeb;
+	-webkit-box-shadow: 0 1px 2px #ebebeb;
+	box-shadow: 0 5px 5px rgba(0,2,0,.15);
+    transition: all 0.3s;
+}
+
+.navbar {
+	margin:0;
+}
+
+
+/*Toggle Menu*/
+#main-nav .navbar-toggle {
+	background-color: #01b1d7;
+}
+
+#main-nav .navbar-toggle span {
+	background-color: #000;
+}
+
+.navbar-left a{
+	color:white;
+}
+
+#main-nav .navbar-nav>li>a:hover,
+#main-nav .navbar-nav>li.active>a {
+	color: aqua;
+    background: none;
+}
+
+.img-responsive{
+    width: 100%;
+}
+
+.form-login {
+    text-align: center;
+    color: whitesmoke;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #0070AF;
+    margin-top: 100px;
+}
+
+.form-login input {
+    margin-bottom: 10px;   
+}
+
+.panel {
+    margin-bottom: 2px;   
+}
+
+.conteudo_painel {
+    background: white;   
+    border-radius:8px;
+    border:1px solid #eee;
+    box-shadow: 2px 2px 5px #888;
+}
+
+.conteudo_painel_int {
+    padding: 12px;   
+}
+
+.vertical-menu {
+    width: 250px; 
+    margin-top: 10px;
+    margin-left: 12px;
+    float: left;
+    border: 3px;
+    border-color: aqua;
+    
+}
+
+.vertical-menu a {
+    background-color: transparent; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.boletim{
+    width: 580px
+}
+
+.span:before{
+    content: '';
+    width: 30px;
+    height: 5px;
+    bottom: -10px;
+    position: absolute;
+    background-color: white;
+    transition: all .3s linear;
+
+}
+.span:after{
+    content: '';
+    width: 30px;
+    height: 5px;
+    top: -10px;
+    position: absolute;
+    background-color: white;
+    transition: all .3s linear;
+    
+}
+.span{
+    margin-left: 10px;
+    width: 30px;
+    height: 5px;
+    top: 20px;  
+    position: absolute;
+    background-color: white;
+    transition: all .3s linear;
+}
+.form{
+    margin-top: 90px;
+    margin-right: 21%;
+    margin-left: 21%;
+    width: 300px
+}
+.margem{
+	margin-top:30px;
+}
