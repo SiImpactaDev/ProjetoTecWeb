@@ -1,0 +1,50 @@
+-- insert na tabela Turma
+insert into Turma(id, turno)
+values ('a','matutino'), ('b','matutino'), 
+('c','matutino'), ('d','matutino'), 
+('e','matutino'), ('f','vespertino'), 
+('g','vespertino'), ('h','noturno'), 
+('i','noturno'), ('j','noturno');
+
+-- insert na tabela Matrícula
+-- não é necessário
+
+-- insert na tabela CursoTurma
+-- não é necessário
+
+-- insert na tabela Questão
+insert into Questao(numero, data_limite_entrega, descricao, data)
+values ('1','2017-12-25','trabalho para entrega 1','2017-11-14'), ('2','2017-12-25','trabalho para entrega 2','2017-11-14'), 
+('3','2017-12-25','trabalho para entrega 3','2017-11-14'), ('4','2017-12-25','trabalho para entrega 4','2017-11-14'), 
+('5','2017-12-25','trabalho para entrega 5','2017-11-14'), ('6','2017-12-25','trabalho para entrega 6','2017-11-14'), 
+('7','2017-12-25','trabalho para entrega 7','2017-11-14'), ('8','2017-12-25','trabalho para entrega 8','2017-11-14'), 
+('9','2017-12-25','trabalho para entrega 9','2017-11-14'), ('10','2017-12-25','trabalho para entrega 10','2017-11-14');
+
+-- insert na tabela ArquivosQuestao
+insert into ArquivosQuestao(arquivo)
+values ('arquivo questão 1'), ('arquivo questão 2'), 
+('arquivo questão 3'), ('arquivo questão 4'), 
+('arquivo questão 5'), ('arquivo questão 6'), 
+('arquivo questão 7'), ('arquivo questão 8'), 
+('arquivo questão 9'), ('arquivo questão 10');
+
+-- insert na tabela Resposta
+insert into Resposta(ra_aluno, data_avaliacao, nota, avaliacao, descricao, data_de_envio)
+values ('1','2017-11-01','10.00','avaliação de matematica','avaliação do dia 01 de mat','2017-11-14'), 
+('2','2017-11-01','09.00','avaliação de matematica','avaliação do dia 01 de mat','2017-11-14'), 
+('3','2017-11-01','08.00','avaliação de matematica','avaliação do dia 01 de mat','2017-11-14'), 
+('4','2017-11-01','10.00','avaliação de matematica','avaliação do dia 01 de mat','2017-11-14'), 
+('5','2017-11-01','10.00','avaliação de matematica','avaliação do dia 01 de mat','2017-11-14'), 
+('6','2017-11-01','07.00','avaliação de matematica','avaliação do dia 01 de mat','2017-11-14'), 
+('7','2017-11-01','09.00','avaliação de matematica','avaliação do dia 01 de mat','2017-11-14'), 
+('8','2017-11-01','09.00','avaliação de matematica','avaliação do dia 01 de mat','2017-11-14'), 
+('9','2017-11-01','05.00','avaliação de matematica','avaliação do dia 01 de mat','2017-11-14'), 
+('10','2017-11-01','10.00','avaliação de matematica','avaliação do dia 01 de mat','2017-11-14');
+
+-- insert na tabela ArquivosResposta
+insert into ArquivosResposta(arquivo)
+values ('arquivo questão 1'), ('arquivo questão 2'), 
+('arquivo questão 3'), ('arquivo questão 4'), 
+('arquivo questão 5'), ('arquivo questão 6'), 
+('arquivo questão 7'), ('arquivo questão 8'), 
+('arquivo questão 9'), ('arquivo questão 10');
