@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!--//main-nav-->
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-xs-12">
+                <div class="form-login">
+                    <h2>Efetue Login</h2>
+                    <form>
+                        <label class="sr-only" for="inputEmail">E-mail:</label>
+                        <input type="email" id="inputEmail" name="inputEmail" class="form-control input-lg" placeholder="Seu E-mail" maxlength="50" required />
+                        <label class="sr-only" for="inputPass">Senha:</label>
+                        <input type="password" id="inputPass" name="inputPass" class="form-control input-lg" placeholder="Sua senha" maxlength="15" required />
+                        
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="s" /> Lembre-me
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block"> 
+                            <span class="glyphicon glyphicon-ok"></span>Acessar                            
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

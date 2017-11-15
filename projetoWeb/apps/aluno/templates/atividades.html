@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!--//main-nav-->
+
+       <div class="col-xs-2">
+		<div class="panel panel-default">
+			<div class="panel-heading">olá aluno:(nome do aluno)</div>
+				<div class="panel-body">
+					Ra:(ra do aluno)
+					<button type="exit" class="btn btn-primary btn-block"> 
+                            <span class="glyphicon glyphicon-remove"></span> sair                         
+                    </button>
+				</div>
+			</div>
+	   
+		<div class="vertical-menu">
+            <h2 class="title-menu">Serviços</h2>
+            <a href="{% url 'avisos' %}">Avisos</a>
+            <a href="" class="active">Consulta de Boletim</a>
+            <a href="{% url 'alterarCadastro' %}">Alterar Cadastro</a>
+            <a href="{% url 'exercicios' %}">Exercicios</a>
+            <a href="{% url 'atividades' %}">Atividades</a>
+            <a href="{% url 'entregaPendentes' %}">Entregas Pendentes</a>
+        </div>
+	</div>
+	<div class="col-xs-6">
+		  <h2>entrega de exercicios</h2>
+		  <form enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="exampleInputFile">File input</label>
+					<input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+					<small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+			</div>
+		  </form>
+
+{% endblock %}

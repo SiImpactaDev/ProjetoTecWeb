@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+		<div class="vertical-menu">
+            <h2 class="title-menu">Serviços</h2>
+            <a href="{% url 'avisos' %}">Avisos</a>
+            <a href="" class="active">Consulta de Boletim</a>
+            <a href="{% url 'alterarCadastro' %}">Alterar Cadastro</a>
+            <a href="{% url 'exercicios' %}">Exercicios</a>
+            <a href="{% url 'atividades' %}">Atividades</a>
+            <a href="{% url 'entregaPendentes' %}">Entregas Pendentes</a>
+        </div>
+        
+         </div>
+	</header>
+    
+   <!--//main-nav-->
+    <!-- /.container-fluid -->
+        </nav>
+      
+      <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-xs-12 form">
+                
+                <form>
+                    <div class="form-group">
+                      <label for="name">Nome Completo:</label>
+                      <input type="text" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                      <label for="numero">Numero de Celular:</label>
+                      <input type="number" class="form-control" id="pwd">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email">
+                      </div>
+					<form enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="exampleInputFile">coloque sua foto</label>
+					<input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+					<small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+			</div>
+		  </form>
+		  
+                    <button type="submit" class="btn btn-default">Enviar</button>
+                </form>
+            </div>
+        </div>
+      </div>
+
+{% endblock %}
